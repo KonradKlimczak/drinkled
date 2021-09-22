@@ -18,10 +18,11 @@ export const filterIngredients = (
 
   const cocktailIngredients = cocktail.recipe.reduce(
     (cocktailIngredients, step) => {
-      return [...cocktailIngredients, step.ingredients.map((i) => i.name)];
+      return [...cocktailIngredients, ...step.ingredients.map((i) => i.name)];
     },
     []
   );
+  
   return cocktailIngredients.some((cocktailIngredient) =>
     ingredients.includes(cocktailIngredient)
   );
