@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import { COCKTAILS } from './constants';
 import { filterIngredients, filterName } from './utils';
 
@@ -6,7 +7,7 @@ const app = express();
 const port = 8080; // default port to listen
 
 // define a route handler for the default home page
-app.get('/cocktails', (req, res) => {
+app.get('/cocktails', cors(), (req, res) => {
   console.log(req.query);
   const { name, ingredients, sortType = 'MOST_POPULAR' } = req.query;
   res.json(
