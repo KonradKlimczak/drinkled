@@ -12,8 +12,7 @@ app.get('/cocktails', cors(), (req, res) => {
   const { name, ingredients, sortType = 'MOST_POPULAR' } = req.query;
   res.json(
     COCKTAILS.filter((cocktail) => {
-      const inName =
-        typeof name === 'string' ? filterName(cocktail, name) : true;
+      const inName = typeof name === 'string' ? filterName(cocktail, name) : true;
       const inIngredients =
         Array.isArray(ingredients) && typeof ingredients[0] === 'string'
           ? filterIngredients(cocktail, ingredients as string[])
@@ -32,6 +31,11 @@ app.get('/cocktails', cors(), (req, res) => {
       }
     })
   );
+});
+
+app.get('/cocktail/:id', cors(), (req, res) => {
+  console.log(req.params.id);
+  res.json(COCKTAILS.find((cocktail) => cocktail.id === req.params.id));
 });
 
 app.get('/', (req, res) => {
