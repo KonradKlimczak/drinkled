@@ -9,7 +9,7 @@ export const COCKTAILS: Cocktail[] = [
       'https://upload.wikimedia.org/wikipedia/commons/5/59/Whiskey_Sour.jpg',
     recipe: [
       {
-        step: 'shake',
+        action: 'shake',
         ingredients: [
           {
             name: 'Whiskey Rye',
@@ -33,7 +33,7 @@ export const COCKTAILS: Cocktail[] = [
         ],
       },
       {
-        step: 'shake',
+        action: 'shake',
         ingredients: [
           {
             name: 'Ice cubes',
@@ -42,7 +42,7 @@ export const COCKTAILS: Cocktail[] = [
         ],
       },
       {
-        step: 'garnish',
+        action: 'garnish',
         ingredients: [
           {
             name: 'Angostura Bitters',
@@ -56,36 +56,37 @@ export const COCKTAILS: Cocktail[] = [
   },
   {
     id: 'd1',
-    name: 'Dawds Sour',
-    rating: 2,
+    name: 'Tom Collins',
+    rating: 3,
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/5/59/Whiskey_Sour.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0b/Tom_Collins_in_Copenhagen.jpg',
     recipe: [
       {
-        step: 'shake',
+        action: 'shake',
         ingredients: [
           {
-            name: 'Egg white',
-            amount: 1,
+            name: 'Gin',
+            amount: 60,
+            unit: 'ml',
+          },
+          {
+            name: 'Lemon Juice',
+            amount: 30,
+            unit: 'ml',
+          },
+          {
+            name: 'Simple Syrup',
+            amount: 8,
+            unit: 'ml',
           },
         ],
       },
       {
-        step: 'shake',
+        action: 'pour',
         ingredients: [
           {
-            name: 'Ice cubes',
-            amount: 4,
-          },
-        ],
-      },
-      {
-        step: 'garnish',
-        ingredients: [
-          {
-            name: 'Angostura Bitters',
-            amount: 4,
-            unit: 'drops',
+            name: 'Seltzer',
+            amount: 'Top with',
           },
         ],
       },

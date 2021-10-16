@@ -1,11 +1,11 @@
 export type Ingredient = {
   name: string;
-  amount: number;
+  amount: number | string;
   unit?: 'ml' | 'drops';
 };
 
 export type RecipeStep = {
-  step: 'shake' | 'garnish';
+  action: 'shake' | 'garnish' | 'pour';
   ingredients: Ingredient[];
 };
 
