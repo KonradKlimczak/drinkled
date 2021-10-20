@@ -53,6 +53,10 @@ export const COCKTAILS: Cocktail[] = [
       },
     ],
     views: 223,
+    author: {
+      id: 'test',
+      username: 'konradklimczak',
+    },
   },
   {
     id: 'd1',
@@ -92,5 +96,9 @@ export const COCKTAILS: Cocktail[] = [
       },
     ],
     views: 23,
+    author: {
+      id: 'test',
+      username: 'konradklimczak',
+    },
   },
 ];
